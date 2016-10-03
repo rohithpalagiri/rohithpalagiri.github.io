@@ -1,3 +1,3 @@
-# Arjan Jassal
+# Rohith Palagiri
 
 My personal website.
