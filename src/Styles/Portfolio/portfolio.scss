@@ -26,6 +26,16 @@
         >a{
             flex: 1;
             min-width: 300px;
+
+            @include ease();
+            transform: scale(0.5);
+            opacity: 0;
+            will-change: transform, opacity;
+
+            &.active{
+                animation: enter .35s $ease-out;
+                animation-fill-mode: forwards;
+            }
         }
         .portfolio-item{
             height: 400px;
@@ -93,44 +103,5 @@
               }
               
         }
-    }
-}
-
-
-
-.modal{
-    z-index: 3;
-    display: none;
-    padding-top: 100px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.6);
-
-    &.active{
-        display: block;
-    }
-
-    .modal-content{
-        margin: auto;
-        background-color: #fff;
-        position: relative;
-        padding: 0;
-        outline: 0;
-        width: 50%;
-        height: 500px;
-    }
-    .close-modal{
-        background: #dd4056;
-        position: absolute;
-        right: -10px;
-        top: -10px;
-        padding: 5px;
-        border: 0;
-        border-radius: 50%;
     }
 }

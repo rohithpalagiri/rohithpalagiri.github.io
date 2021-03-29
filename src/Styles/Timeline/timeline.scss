@@ -373,7 +373,7 @@
         font-size: 22px;
         font-weight: 700;
         position: absolute;
-        top: -14px;
+        top: -13px;
         left: -10px;
         width: 52px;
         line-height: 52px;
@@ -498,7 +498,6 @@
         margin: 0 0 5px;
         font-size: 14px;
         position: relative;
-        // color: white;
         z-index: 1;
         padding-left: 0;
     }
@@ -512,6 +511,34 @@
         position: relative;
         width: 100%;
         height: 8px;
+
+        &.active{
+            &[data-percent="6"] {
+                .progress{
+                    width: 60% !important;
+                }
+            }
+            &[data-percent="7"] {
+                .progress{
+                    width: 70% !important;
+                }
+            }
+            &[data-percent="8"] {
+                .progress{
+                    width: 80% !important;
+                }
+            }
+            &[data-percent="9"] {
+                .progress{
+                    width: 90% !important;
+                }
+            }
+            &[data-percent="10"] {
+                .progress{
+                    width: 100% !important;
+                }
+            }
+        }
     }
     .skill-unit .bar .progress {
         position: absolute;
@@ -539,6 +566,7 @@
         background: rgba(255, 255, 255, 1);
         border-radius: 50%;
         @include shadow(1);
+        z-index: 1;
     }
     
     .section-title h2:after, .section-title h2:before {
@@ -577,6 +605,7 @@
         border-left-color: transparent!important;
     }
 }
+
 
 .u-wrapper {
     max-width: 800px;

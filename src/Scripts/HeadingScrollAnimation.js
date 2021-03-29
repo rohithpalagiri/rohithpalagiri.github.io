@@ -3,7 +3,7 @@ var HeadingScrollAnimation = (function() {
 	var heading = document.querySelector('.home__wrapper');
 
 	function init() {
-		if (window.innerWidth >= 768)
+		if (window.innerWidth >= 400)
 			window.addEventListener('scroll', handleScroll);
 	}
 
