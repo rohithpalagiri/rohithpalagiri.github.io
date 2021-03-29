@@ -100,7 +100,7 @@ var ExpandProject = (function(window, document) {
 	}
 
 	function resetTitleTag() {
-		document.title = 'Arjan Jassal | Front-end Developer Vancouver';
+		document.title = 'Rohith Palagiri | Front-End Developer';
 	}
 
 	function updateComponents(work) {
@@ -144,7 +144,7 @@ var ExpandProject = (function(window, document) {
 		}, name, name);
 
 		name = name.replace(/\_/g, ' ');
-		document.title = 'Arjan Jassal | ' + name[0].toUpperCase() + name.substr(1, name.length - 1);
+		document.title = 'Rohith Palagiri | ' + name[0].toUpperCase() + name.substr(1, name.length - 1);
 
 		updateComponents(workComponents.activeItem.getAttribute('data-work'));
 		transformBackground(workComponents.activeItem, workComponents.activeBg);

@@ -6,7 +6,6 @@ module.exports = {
 		client: 'Burlington, MA',
 		whatIDid: 'Built a single page application that took in raw CuraEngine data and displayed real time 3D printer information',
 		description: 'The purpose of the web application was to display information that came from our printer. We would take the data which could be as simple as how far along a print was to as complicated as taking 3D modeling data from the CuraEngine and displaying properly in a viewer on the page. I was tasked with processing that data from these sources and accurate displaying them on the web application in real time.',
-		github: 'https://github.com/ArjanJ/bricks',
 		live: 'https://www.youtube.com/watch?v=U7ULd3joUl8',
 		tech: ['JavasScript, React, Meteor, Sass, Materialize CSS, Typescript, Gulp'],
 		process:[
