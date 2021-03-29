@@ -1,0 +1,145 @@
+.work__item {
+	$p: &;
+	$background-opacity: 1;
+	background-color: darken(#dfe2f0, 1%);
+	display: flex;
+	align-items: start;
+	justify-content: flex-start;
+	flex-direction: column;
+	min-height: 205px;
+	width: 100%;
+	padding: ($base-space * 1.25) (0);
+	position: relative;
+	z-index: 1;
+	transform: scale(0.5);
+	opacity: 0;
+	will-change: transform, opacity;
+	cursor: pointer;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+	@include ease();
+	@include shadow(1);
+
+	padding-left: 40px;
+    padding-top: 5px;
+    padding-bottom: 25px;
+	padding-right: 20px;
+
+	@media (max-width: 640px){
+		padding-left: 20px;
+	}
+
+
+	&--active {
+		animation: enter .35s $ease-out;
+		animation-fill-mode: forwards;
+	}
+	
+
+	&-wrapper {
+		max-width: 400px;
+		margin: 0 auto;
+		padding: (0) ($base-space);
+		text-align: center;
+	}
+
+	&-heading, &-location {
+		display: inline-block;
+		color: #dd4056;
+    	font-weight: bold;
+		font-size: 12px;
+		// letter-spacing: (-$base-space / 16);
+		@include ease();
+	}
+
+	&-tag {
+		font-size: 1.2rem;
+		font-weight: 700;
+		// background: $theme-color-4;
+		// color: $theme-color-1;
+		padding: ($base-space / 4) ($base-space / 2);
+		border-radius: 6px;
+		@include ease();
+	}
+
+	&-bg {
+		@include cover;
+		z-index: -2;
+		background: inherit;
+		@include ease('out', .6);
+	}
+
+	&-tagline {
+		font-size: 1.3rem;
+		@include ease();
+
+		&.hide {
+			opacity: 0;
+			transform: translate3d(0, 50%, 0);
+		}
+	}
+
+	&:hover {
+		z-index: 2;
+		@include shadow(4);
+	}
+
+	&.active {
+		z-index: 2;
+	}
+
+	&.education{
+		box-shadow: none;
+		background: $theme-color-7;
+
+		&:hover {
+			box-shadow: none;
+		}
+	}
+
+	@include bp(small) {
+		// min-height: 25vh;
+
+		&-heading {
+			// font-size: map-get($heading-sizes, 2);
+			// letter-spacing: (-$base-space / 14);
+		}
+	}
+
+	@include bp(medium) {
+		height: auto;
+
+		&-tagline {
+			font-size: map-get($heading-sizes, 6);
+			margin-bottom: 0;
+		}
+
+		&-tag {
+			// position: absolute;
+			// bottom: $base-space;
+			// left: $base-space;
+		}
+	}
+
+	@include bp(large) {
+		// min-height: calc(50vh - #{$base-space});
+		// width: 50%;
+
+		&-heading {
+			// font-size: map-get($heading-sizes, 1);
+			// letter-spacing: (-$base-space / 8);
+		}
+	}
+}
+
+.heading-active{
+	font-size: map-get($heading-sizes, 1);
+	font-family: "Montserrat","Arial",sans-serif;
+	font-weight: 700;
+	letter-spacing: (-$base-space / 8);
+	color: $theme-color-1;
+}
+
+.d-none{
+	opacity: 0 !important;
+}
